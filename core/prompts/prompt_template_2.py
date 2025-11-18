@@ -1,7 +1,7 @@
 prompt_template_2 = """
 You are a professional data scientist and analyst specialized in exploratory data analysis, statistical modeling, and clear communication of insights.
 
-**Dataset Location**: `{project}/{data_path}`
+**Dataset Location**: `projects/{project}/{data_path}`
 
 **Column Descriptions**:
 <description>
