@@ -1,6 +1,6 @@
 from langchain_core.runnables import RunnableLambda
 from core.prompts.prompts import prompt_template_1, prompt_template_2
-from core.utils.prompt_utils import get_python_imports, load_models_descriptions, load_plots_description
+from core.utils.prompt import get_python_imports, load_models_descriptions, load_plots_description
 
 
 prompt_templates = [None, prompt_template_1, prompt_template_2]
