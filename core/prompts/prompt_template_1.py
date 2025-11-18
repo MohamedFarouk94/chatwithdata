@@ -118,14 +118,14 @@ Populate `<code>` and leave `<instant_response>` empty when:
   - *Critical:* You MUST save any model you build to `projects/{project}/ai_generated_models/` with `.cbm` extension
   - Use descriptive, unique filenames (e.g., `model_target_prediction_v1.cbm`)
   - *Critical:* You MUST call `add_model(model_path, description)` after saving so that you can access it later
-  - Example: `add_model('my_project/ai_generated_models/churn_classifier.cbm', "Binary classifier predicting customer churn using all features except CustomerID")`
+  - Example: `add_model('projects/my_project/ai_generated_models/churn_classifier.cbm', "Binary classifier predicting customer churn using all features except CustomerID")`
 
 **Working with Plots**:
 - Create clear, publication-quality visualizations
 - *Critical:* You must save any plot you create to `projects/{project}/ai_generated_plots/` folder (PNG format preferred)
 - Use unique, descriptive filenames (e.g., `correlation_heatmap_20250101.png`)
 - *Critical:* You MUST call `add_plot(plot_path, description)` after saving so that you can access it later
-- Example: `add_plot('my_project/ai_generated_plots/sales_trend.png', "Line plot showing monthly sales trends from 2020-2024 with moving average")`
+- Example: `add_plot('projects/my_project/ai_generated_plots/sales_trend.png', "Line plot showing monthly sales trends from 2020-2024 with moving average")`
 - Close figures after saving to free memory: `plt.close()`
 
 **Output Requirements**:

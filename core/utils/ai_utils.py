@@ -1,11 +1,12 @@
 import os
 import json
+from core.controllers.project import get_current_project
 
 
 def add_item(path, descr, filename, path_key, descr_key):
     data = []
     if os.path.exists(filename):
-        with open(filename, 'r') as f:
+        with open(f'projects/{get_current_project()}/filename', 'r') as f:
             try:
                 data = json.load(f)
             except json.JSONDecodeError:
@@ -22,6 +23,7 @@ def add_item(path, descr, filename, path_key, descr_key):
 
 def add_model(model_path, model_descr):
     add_item(model_path, model_descr, 'models.json', 'model_path', 'model_descr')
+
 
 def add_plot(plot_path, plot_descr):
     add_item(plot_path, plot_descr, 'plots.json', 'plot_path', 'plot_descr')
