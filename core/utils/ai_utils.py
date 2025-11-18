@@ -1,12 +1,12 @@
 import os
 import json
-from core.controllers.project import get_current_project
 
 
 def add_item(path, descr, filename, path_key, descr_key):
     data = []
+    project = path.split('/')[1]
     if os.path.exists(filename):
-        with open(f'projects/{get_current_project()}/filename', 'r') as f:
+        with open(f'projects/{project}/filename', 'r') as f:
             try:
                 data = json.load(f)
             except json.JSONDecodeError:
