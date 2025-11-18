@@ -32,3 +32,6 @@ def create_project(project, df):
 
     with open(project_dir / 'plots.json', 'w') as f:
         json.dump([], f, indent=4)
+
+    with open(project_dir / 'history.json', 'w') as f:
+        json.dump([], f, indent=4)
