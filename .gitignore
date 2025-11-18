@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+*.env/
+*/venv/
+*/.venv/
+*/env/
+*/ENV/
+
+# --- VSCode ---
+.vscode/
+.settings/
+
+# --- OS Files ---
+.DS_Store
+Thumbs.db
+
+# --- Python build artifacts ---
+build/
+dist/
+*.egg-info/
+
+# --- Environment files ---
+.env
+*.env
+.env.*
+
+# --- Pickle model files ---
+*.pkl
+*.pickle
