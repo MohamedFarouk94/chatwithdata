@@ -1,7 +1,5 @@
 import json
-
-
-get_current_project = lambda:None # temp
+from core.controllers.project import get_current_project
 
 
 def load_json_list(filename):
