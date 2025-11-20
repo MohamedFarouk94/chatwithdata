@@ -35,3 +35,6 @@ def create_project(project, df):
 
     with open(project_dir / 'history.json', 'w') as f:
         json.dump([], f, indent=4)
+
+    with open(project_dir / 'ai_generated_models/models.txt', 'w') as f:
+        f.write('Here should be models, but they will not be pushed to github!!')
