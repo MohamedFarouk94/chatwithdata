@@ -4,7 +4,7 @@ from core.utils.exec import run_agent_code
 def execute(data):
     code_res = run_agent_code(data['code'])
     data.update(code_res)
-    data['acrivate_prompt'] = 2
+    data['activate_prompt'] = 2
     return data
 
 
