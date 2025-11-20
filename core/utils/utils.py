@@ -25,3 +25,23 @@ def parse_xml(x):
         'instant_response': instant_response,
         'code': code
     }
+
+
+def get_chat_segment(data):
+    chat_segment = []
+
+    chat_segment.append({'role': 'user', 'content': data['user']})
+    chat_segment.append({'role': 'think', 'content': data['think_1']})
+    
+    if data.get('code', None):
+        chat_segment.append({'role': 'code', 'content': data['code']})
+
+    if data.get('stdout', None):
+        chat_segment.append({'role': 'stdout', 'content': data['code']})
+
+    if data.get('think_2', None):
+        chat_segment.append({'role': 'think', 'content': data['think_2']})
+
+    chat_segment.append({'role': 'assistant', 'content': data['assistant']})
+
+    return chat_segment
