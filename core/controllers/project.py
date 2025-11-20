@@ -15,7 +15,7 @@ def set_current_project(user='admin', project='project_1'):
     CURRENT_PROJECTS[user] = project
 
 
-def create_project(project, df):
+def create_project(project, df, cat_cols, columns_description):
     project_dir = PROJECTS_DIR / project
     project_dir.mkdir(parents=True, exist_ok=True)
 
@@ -27,6 +27,12 @@ def create_project(project, df):
 
     df.to_csv(project_dir / 'df.csv', index=False)
 
+    with open(project_dir / 'cat_cols.json', 'w') as f:
+        json.dump(cat_cols, f, indent=4)
+
+    with open(project_dir / 'columns_description.json', 'w') as f:
+        json.dump(columns_description, f, indent=4)
+    
     with open(project_dir / 'models.json', 'w') as f:
         json.dump([], f, indent=4)
 
