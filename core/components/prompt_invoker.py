@@ -7,8 +7,6 @@ prompt_templates = [None, prompt_template_1, prompt_template_2]
 
 def invoke_prompt(data):
     data['prompt'] = prompt_templates[data['activate_prompt']].format(
-        project=data['project'],
-        data_path=data['data_path'],
         cat_cols=data['cat_cols'],
         columns_description=data['columns_description'],
         models_descriptions=load_models_descriptions(data['project']),
