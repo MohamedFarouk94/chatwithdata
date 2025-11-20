@@ -32,5 +32,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from catboost import CatBoostClassifier, CatBoostRegressor
 from utils import add_model, add_plot
+from paths import project_dir
 """
+    # These imports will not be actually imported, but the LLM will be told to act as so.
     return python_imports
