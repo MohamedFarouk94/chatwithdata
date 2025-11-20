@@ -4,9 +4,9 @@ import json
 
 def add_item(path, descr, filename, path_key, descr_key):
     data = []
-    project = path.split('/')[1]  # this line should be updated to a pathlib version but after updating prompts
+    project_dir = path.parent.parent    # project / ai_generated_XXX / cbm_or_png_file
     if os.path.exists(filename):
-        with open(f'projects/{project}/filename', 'r') as f:
+        with open(project_dir / filename, 'r') as f:
             try:
                 data = json.load(f)
             except json.JSONDecodeError:
