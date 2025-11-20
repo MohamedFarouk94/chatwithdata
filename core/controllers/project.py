@@ -43,4 +43,4 @@ def create_project(project, df, cat_cols, columns_description):
         json.dump([], f, indent=4)
 
     with open(project_dir / 'ai_generated_models/models.txt', 'w') as f:
-        f.write('Here should be models, but they will not be pushed to github!!')
+        f.write('Here should be catboost models, but they will not be pushed to github!!')
